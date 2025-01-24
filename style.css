@@ -1,6 +1,11 @@
+:root {
+  --bgc: rgb(64 68 54);
+}
+
 /*
   Josh's Custom CSS Reset
   https://www.joshwcomeau.com/css/custom-css-reset/
+  *edited for my needs
 */
 
 *, *::before, *::after {
@@ -21,8 +26,9 @@ img, picture, video, canvas, svg {
   max-width: 100%;
 }
 
-input, button, textarea, select {
+input, button, textarea, select, form, fieldset, legend, label {
   font: inherit;
+  appearance: none;
 }
 
 p, h1, h2, h3, h4, h5, h6 {
@@ -36,11 +42,18 @@ h1, h2, h3, h4, h5, h6 {
   text-wrap: balance;
 }
 
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
 #root, #__next {
   isolation: isolate;
 }
 
 /* My styling */
+
+
 
 body {
   height: 100vh;
@@ -48,4 +61,94 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-} 
+  font-size: 1.2rem;
+  letter-spacing: 3%;
+  color: white;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 5rem;
+}
+h1 {
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+
+form {
+  flex: 0 1 32rem;
+  height: 100%;
+  background: var(--bgc);
+  overflow-y: scroll;
+  padding: 1rem;
+}
+
+fieldset.first-encounter {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+
+  border: 0;
+
+  & > legend {
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  & ul {
+    display: flex;
+    gap: 3em;
+    justify-content: center;
+  }
+}
+
+div.intention {
+  display: flex;
+  gap: 1rem;
+  & > :first-child {
+    content: url("img/traveller.svg");
+    width: 5rem;
+  }
+  
+}
+
+div.intention-submit {
+  width: 100%;
+}
+
+p.saying {
+  background-color: rgb(49, 52, 41);
+  padding: 0.5em;
+}
+
+p.intention {
+  flex: 1 1 100%;
+
+  & label {
+    flex: 1 0 auto;
+  }
+  & textarea {
+    resize: none;
+    display: inline-block;
+    width: 100%;
+    height: 5rem;
+    background-color: var(--bgc);
+    border: none;
+    outline: none;
+    color: white;
+  }
+}
+
+
+
+div.villager {
+  display: flex;
+  gap: 1rem;
+  padding-left: 1rem;
+  & :first-child {
+    content: url("img/villager.svg");
+    width: 3rem;
+    margin-right: 1rem;
+  }
+}
+
