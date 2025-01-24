@@ -8,7 +8,7 @@ Visual Style
 
     Font Style:
         Use a serif font like "Cinzel" or "Lora" for an ancient or mystical vibe.
-        Pair it with a handwritten-style font for questions, e.g., "Patrick Hand" or "  " for dialog.
+        Pair it with a handwritten-style font for questions, e.g., "Patrick Hand" or "Dancing Script" for dialog.
 
     Colors:
         Stick to earthy tones: warm golds, muted greens, and browns.
